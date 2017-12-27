@@ -1,0 +1,125 @@
+﻿/*========== global style ==========*/
+
+*, *::after, *::before{
+	box-sizing: border-box;
+}
+
+@font-face{
+  font-family: 'MyWebFont';
+  src: url('webfont.eot'); /* IE9 Compat Modes */
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('webfont.svg') format('svg'); /* Legacy iOS */
+}
+
+.clearfix::after{
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	width: 0;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+body{
+	font: normal 16px/1.2 Tahoma, sans-serif;
+	background-color: #20588c;
+}
+
+.wrapper{
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+/*========== header style ==========*/
+
+.header{
+	display: flex;	
+	flex-flow: row wrap;
+	justify-content: space-between;
+	padding-top: 2rem;
+}
+
+.headerLogo, .headerTelefon{
+	flex: 0 1 auto;
+	transition: all 1s; 
+}
+
+.headerLogo img{
+	transition: all 1s; 
+}
+
+.header .headerTelefon{	
+	padding-top: 1.125rem;
+}
+
+.header .headerTelefon p:first-child{
+	font-weight: bold;
+	font-size: 1.125em;
+	color: #fff;
+}
+
+.header .headerTelefon p:last-child{
+	font-weight: bold;
+	font-size: 1.5em;
+	color: #aad6fe;
+}
+
+
+/*========== responsive style ==========*/
+
+/* Large devices Desktops (более 1200px) */
+@media only screen and (min-width: 1201px) {
+
+}
+
+/* Medium devices Desktops (от 1200px до 993px) */
+@media only screen and ( min-width: 993px) and (max-width: 1200px) {
+	
+}
+
+/* Small devices Tablets (от 992px до 769px) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+
+}
+
+/* Small devices Phones (от 768px до 481px) */
+@media only screen and  (min-width: 481px) and (max-width: 768px) {
+	.header{
+		flex-flow: column nowrap;
+		justify-content: center;
+		padding-top: 1rem;
+	}
+	.headerLogo, .headerTelefon{		
+		text-align: center;
+		width: 60%;
+		margin: 0 auto;		
+	}
+	.header .headerTelefon{
+		flex: 1 1 100%; 	
+		padding-top: 0.5rem;
+	}
+}
+
+/* Extra small devices Phones (менее 480px) */
+@media only screen and (max-width: 480px) {
+	.header{
+		flex-flow: column nowrap;
+		justify-content: center;
+		padding-top: 0.5rem;
+	}
+	.headerLogo, .headerTelefon{		
+		text-align: center;
+		width: 90%;
+		margin: 0 auto;		
+	}
+	.header .headerTelefon{	
+		padding-top: 0.25rem;
+	}
+}
